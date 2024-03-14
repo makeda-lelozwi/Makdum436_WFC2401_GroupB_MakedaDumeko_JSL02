@@ -31,9 +31,12 @@ const addNewGoal = () => {
     if (goalList.textContent.trim() === goalInput) {
       isDuplicate = true;
       alert("This goal already exists.")
-      return;
+      preventDefault();
     }
+    
   })
+
+
   
   // ⚠️ Hint 2: Prevent duplicates
   // If a duplicate is found, display an alert to the user and don't add the goal to the list.

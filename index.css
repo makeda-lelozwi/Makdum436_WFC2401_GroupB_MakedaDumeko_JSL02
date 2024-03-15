@@ -59,6 +59,10 @@ ul {
   list-style-type: none;
 }
 
+li {
+  cursor: pointer;
+}
+
 #themeToggle {
   position: absolute;
   top: 20px;

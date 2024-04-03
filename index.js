@@ -14,11 +14,11 @@ const displayWorkoutRoutine = () => {
 
 document.querySelector('#submitWorkout').addEventListener('click', displayWorkoutRoutine);
 
+//Goals 
 
 const addNewGoal = () => {
   const goalInput = document.getElementById("goalInput").value;
   const goalList = document.getElementById("goalList");
-  
   
   let isDuplicate = false; 
 
@@ -26,9 +26,8 @@ const addNewGoal = () => {
     if (goalList.textContent.trim() === goalInput) {
       isDuplicate = true;
       alert("This goal already exists.")
-      preventDefault();
-    }
-    
+      preventDefault(); //used preventDefault() because return wasn't working 
+    } 
   })
   
   const newGoal = document.createElement('li');
@@ -37,17 +36,13 @@ const addNewGoal = () => {
 
   newGoal.addEventListener("click", ()=> {
     goalList.removeChild(newGoal);
-  })
-
-  
+  })  
 };
 
 // Add event listener to the goal submit button
 document.querySelector('#submitGoal').addEventListener('click', addNewGoal);
 
-
-
-///
+///Water Intake Tracker
 let waterIntake = 0;
 const updateWaterIntake = (change) => {
   waterIntake += change;
